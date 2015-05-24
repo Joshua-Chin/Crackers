@@ -26,7 +26,7 @@ html, body {
 }
 
 #top #header {
-    width: 100%;
+    width: inherit;
     height: 75px;
 
     background-color: #fff;
@@ -73,7 +73,7 @@ html, body {
 }
 
 #nav-list {
-    width: 400px;
+    width: inherit;
     height: 25px;
 
     margin-top: 25px;
@@ -83,4 +83,77 @@ html, body {
 #nav-list li {
     display: inline-block;
     margin-left: 20px;
+}
+
+/* TOP-BODY */
+
+#top #top-body {
+    width: inherit;
+    height: 425px;
+}
+
+#top #top-body #desc {
+    width: inherit;
+    height: 50px;
+
+    font-family: raleway;
+    font-size: 25px;
+    color: #f9f9f9;
+    text-align: center;
+
+    padding-top: 30px;
+}
+
+#top #top-body #login {
+    width: inherit;
+    height: 345px;
+
+    padding-top: 30px;
+}
+
+#top #top-body #login #login-box {
+    width: 200px;
+    height: 200px;
+
+    position: relative;
+    top: 0;
+    left: 50%;
+
+    margin-left: -100px;
+}
+
+#top #top-body #login #login-box #tab-container {
+    width: inherit;
+    height: 20px;
+}
+
+#top #top-body #login #login-box #tab-container .tab { 
+    width: 100px;
+    height: inherit;
+
+    font-family: crypteo;
+    font-size: 20px;
+    color: #fff;
+
+    float: left;
+}
+
+#top #top-body #login #login-box #fields {
+    width: inherit;
+    height: 150px;
+
+    margin-top: 30px;
+}
+
+#top #top-body #login #login-box #fields input {
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 27px;
+    font-family: 'Raleway', sans-serif;
+    height: 40px;
+    width: 200px;
+    margin-bottom: 10px;
+    opacity: 1;
+    text-indent: 20px;
 }
