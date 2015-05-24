@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<style type="text/css">
+			html, body {
+				font-family: helvetica, sans-serif;
+			}
+		</style>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var populate = function(data) {
+					for each(var event in data) {
+						$("#events-table-body").append("<tr>")
+							.append("<td>" + event.name + "</td>")
+							.append("<td>" + event.owner + "</td>")
+							.append("<td>" + event.startTime + "</td>")
+							.append("<td>" + event.endTime + "</td>")
+							.append("<td>" + event.date + "</td>")
+							.append("<td>" + event.location + "</td>")
+							.append("<td>" + event.state + "</td>");
+					}
+				}
+
+				var fetch = function(url) {
+					$.ajax({
+				    	type: 'GET',
+				    	url: url,
+				     	async: false,
+				    	contentType: "application/json",
+				    	dataType: 'jsonp',
+				    	success: populate
+				    });
+				}
+
+				var url = ""; // URL to REST API
+				fetch(url);
+			});
+		</script>
+	</head>
+
+	<body>
+		Events:
+
+		<table id="events-table">
+			<thead>
+				<th>Name</th>
+				<th>Owner</th>
+				<th>Start Time</th>
+				<th>End Time</th>
+				<th>Date</th>
+				<th>Location</th>
+				<th>State</th>			
+			</thead>
+
+			<tbody id="events-table-body">
+			</tbody>
+		</table>
+	</body>
+</html>
